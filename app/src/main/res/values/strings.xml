@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Practice141</string>
+
+    <string name="open">Open Drawer</string>
+    <string name="close">Close Drawer</string>
+    <string name="toolbar">Toolbar</string>
 </resources>
