@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -84,12 +85,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         recyclerFree.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclerFree.setAdapter(adapterFree);
 
-        modelFreeList.add(new ModelFree(1, String.valueOf(R.drawable.lexus2), "lexus2", "10", "10000$", "5$"));
-        modelFreeList.add(new ModelFree(2, String.valueOf(R.drawable.lexus3), "lexus3", "20", "20000$", "6$"));
-        modelFreeList.add(new ModelFree(3, String.valueOf(R.drawable.lexus3), "lexus3", "30", "30000$", "7$"));
-        modelFreeList.add(new ModelFree(4, String.valueOf(R.drawable.lexus4), "lexus4", "40", "40000$", "8$"));
-        modelFreeList.add(new ModelFree(5, String.valueOf(R.drawable.lexus5), "lexus5", "50", "50000$", "9$"));
-        modelFreeList.add(new ModelFree(6, String.valueOf(R.drawable.lexusd), "lexus6", "60", "60000$", "5$"));
+        modelFreeList.add(new ModelFree(1, R.drawable.lexus2, "lexus2", "10", 100000, "5%"));
+        modelFreeList.add(new ModelFree(2, R.drawable.lexus3, "lexus3", "20", 20000, "6$"));
+        modelFreeList.add(new ModelFree(3, R.drawable.lexus3, "lexus3", "30", 30000, "7$"));
+        modelFreeList.add(new ModelFree(4, R.drawable.lexus4, "lexus4", "40", 40000, "8$"));
+        modelFreeList.add(new ModelFree(5, R.drawable.lexus5, "lexus5", "50", 50000, "9$"));
+        modelFreeList.add(new ModelFree(6, R.drawable.lexusd, "lexus6", "60", 60000, "5$"));
+
 
         adapterFree.notifyDataSetChanged();
     }

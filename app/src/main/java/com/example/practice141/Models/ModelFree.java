@@ -3,13 +3,13 @@ package com.example.practice141.Models;
 public class ModelFree {
 
     int id;
-    String image;
+    int image;
     String title;
     String visit;
-    String price;
+    int price;
     String free;
 
-    public ModelFree(int id, String image, String title, String visit, String price, String free) {
+    public ModelFree(int id, int image, String title, String visit, int price, String free) {
         this.id = id;
         this.image = image;
         this.title = title;
@@ -26,11 +26,11 @@ public class ModelFree {
         this.id = id;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
@@ -50,11 +50,11 @@ public class ModelFree {
         this.visit = visit;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
