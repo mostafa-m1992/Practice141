@@ -1,77 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="170dp"
-    android:layout_height="260dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/tools"
-    app:cardCornerRadius="2dp"
-    app:cardElevation="1dp"
-    android:clickable="true"
-    android:id="@+id/cardViewFree"
     android:layout_marginRight="4dp"
     android:orientation="vertical"
-    android:theme="@style/Theme.MaterialComponents.DayNight"
-    style="@style/Widget.MaterialComponents.CardView">
+    android:id="@+id/cardViewOnly"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="1dp"
+    android:theme="@style/Theme.MaterialComponents.DayNight">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout"
-        android:visibility="visible"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/imageFree"
-                android:layout_width="match_parent"
-                android:layout_height="170dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/lexus2" />
-
-        </RelativeLayout>
+            android:layout_height="170dp"
+            android:id="@+id/imageOnly"
+            android:src="@drawable/benz1"
+            android:scaleType="centerInside"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ellipsize="start"
-            android:id="@+id/textTitle"
+            android:id="@+id/textTitleOnly"
             android:layout_margin="3dp"
             android:gravity="left"
-            android:text="lexus2"
+            android:text="benz"
             android:textColor="@color/black"
-            android:textSize="12dp"
-            android:singleLine="true" />
+            android:textSize="12sp"
+            android:ellipsize="start"
+            android:singleLine="true"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layoutDirection="ltr"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layoutDirection="ltr">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
-                android:gravity="center_vertical"
-                android:layoutDirection="ltr"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:layoutDirection="ltr"
+                android:padding="5dp"
+                android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:id="@+id/textVisitFree"
+                    android:id="@+id/textVisitOnly"
                     android:text="10"
+                    android:textSize="12sp"
                     android:textColor="@color/black"/>
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
                     android:src="@drawable/ic_baseline_visibility_24"
                     app:tint="@color/black" />
 
@@ -87,23 +76,15 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textPriceFree"
+                    android:id="@+id/textPriceOnly"
                     android:gravity="center_vertical|right"
-                    android:text=""
+                    android:textSize="11sp"
                     android:textColor="@color/black"
-                    android:textSize="12sp"/>
+                    android:text="100000$"/>
 
             </LinearLayout>
 
         </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textFreePrice"
-            android:padding="1dp"
-            android:layout_marginRight="5dp"
-            android:gravity="right|center_vertical"/>
 
     </LinearLayout>
 

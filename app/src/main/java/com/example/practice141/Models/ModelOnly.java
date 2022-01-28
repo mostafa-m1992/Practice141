@@ -6,9 +6,9 @@ public class ModelOnly {
     int image;
     String title;
     String visit;
-    String price;
+    int price;
 
-    public ModelOnly(int id, int image, String title, String visit, String price) {
+    public ModelOnly(int id, int image, String title, String visit, int price) {
         this.id = id;
         this.image = image;
         this.title = title;
@@ -48,11 +48,11 @@ public class ModelOnly {
         this.visit = visit;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }

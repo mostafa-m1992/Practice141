@@ -12,12 +12,6 @@
         android:id="@+id/main_toolbar"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/image1"
-        android:scaleType="fitXY"/>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,6 +22,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="#e7e7e7">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/image1"
+                android:scaleType="fitXY"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                 android:id="@+id/recyclerFree"
                 android:layoutDirection="ltr"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="3dp"/>
+                />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
@@ -100,7 +100,7 @@
                 android:id="@+id/recyclerOnly"
                 android:layoutDirection="ltr"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="3dp"/>
+                />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -161,7 +161,6 @@
                 android:layout_height="wrap_content"
                 android:layoutDirection="ltr"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="3dp"
                 android:id="@+id/recyclerVisit"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -179,7 +178,6 @@
                 android:layout_height="wrap_content"
                 android:layoutDirection="ltr"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="3dp"
                 android:id="@+id/recyclerSales"/>
 
         </LinearLayout>
