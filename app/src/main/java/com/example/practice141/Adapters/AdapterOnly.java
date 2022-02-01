@@ -38,7 +38,7 @@ public class AdapterOnly extends RecyclerView.Adapter<AdapterOnly.MyViewHolder> 
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         ModelOnly modelOnly = modelOnlies.get(position);
 
-        holder.imageOnly.setImageResource(modelOnly.getImage());
+        //holder.imageOnly.setImageResource(modelOnly.getImage());
         DecimalFormat decimalFormat = new DecimalFormat("###,###");
         String price = decimalFormat.format(modelOnly.getPrice());
         holder.textTitleOnly.setText(modelOnly.getTitle());

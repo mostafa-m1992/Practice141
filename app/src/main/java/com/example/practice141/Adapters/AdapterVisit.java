@@ -43,7 +43,7 @@ public class AdapterVisit extends RecyclerView.Adapter<AdapterVisit.MyViewHolder
         String price = decimalFormat.format(modelVisit.getPrice());
         holder.textPriceVisit.setText(price + " " + "$");
 
-        holder.imageVisit.setImageResource(modelVisit.getImage());
+        //holder.imageVisit.setImageResource(modelVisit.getImage());
         holder.textTitleVisit.setText(modelVisit.getTitle());
         holder.textVisitVisit.setText(modelVisit.getVisit());
     }

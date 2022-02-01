@@ -46,7 +46,7 @@ public class AdapterFree extends RecyclerView.Adapter<AdapterFree.MyViewHolder> 
         holder.textVisitFree.setText(free.getVisit());
         holder.textTitle.setText(free.getTitle());
         holder.textFreePrice.setText(free.getFree());
-        holder.imageFree.setImageResource(free.getImage());
+        //holder.imageFree.setImageResource(free.getImage());
     }
 
     @Override

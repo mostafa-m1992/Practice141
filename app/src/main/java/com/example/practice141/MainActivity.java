@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -12,24 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
-import com.daimajia.slider.library.Animations.DescriptionAnimation;
-import com.daimajia.slider.library.SliderLayout;
-import com.daimajia.slider.library.SliderTypes.BaseSliderView;
-import com.daimajia.slider.library.SliderTypes.TextSliderView;
-import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.example.practice141.Adapters.AdapterFree;
 import com.example.practice141.Adapters.AdapterOnly;
 import com.example.practice141.Adapters.AdapterSales;
@@ -42,7 +31,6 @@ import com.google.android.material.navigation.NavigationView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Toolbar mainToolbar;
     RecyclerView recyclerFree, recyclerOnly, recyclerVisit, recyclerSales;
+    CardView cardCategory;
+    TextView textLogRegHeader;
 
     AdapterFree adapterFree;
     List<ModelFree> modelFreeList = new ArrayList<>();
@@ -80,6 +70,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         recyclerOnly = findViewById(R.id.recyclerOnly);
         recyclerVisit = findViewById(R.id.recyclerVisit);
         recyclerSales = findViewById(R.id.recyclerSales);
+        cardCategory = findViewById(R.id.cardCategory);
+        textLogRegHeader = findViewById(R.id.textLogRegHeader);
 
         setSupportActionBar(mainToolbar);
 
@@ -96,6 +88,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setDataOnly();
         setDataVisit();
         setDataSales();
+
+        iconOnClick();
+    }
+
+    private void iconOnClick() {
+        /*textLogRegHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ActivityLogin.class));
+            }
+        });*/
+        cardCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ActivityCategory.class));
+            }
+        });
     }
 
     private void setDataSales() {
@@ -104,20 +113,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         recyclerSales.setAdapter(adapterSales);
 
         modelSalesList.add(new ModelSales(1, R.drawable.hyundai1, "hyundai1", "10", 1000000));
-        modelSalesList.add(new ModelSales(2, R.drawable.hyundai2, "hyundai2", "10", 1000000));
-        modelSalesList.add(new ModelSales(3, R.drawable.hyundai4, "hyundai3", "10", 1000000));
-        modelSalesList.add(new ModelSales(4, R.drawable.hyundai5, "hyundai4", "10", 1000000));
-        modelSalesList.add(new ModelSales(5, R.drawable.hyundai6, "hyundai5", "10", 1000000));
-        modelSalesList.add(new ModelSales(6, R.drawable.hyundai7, "hyundai6", "10", 1000000));
-        modelSalesList.add(new ModelSales(7, R.drawable.hyundai8, "hyundai7", "10", 1000000));
-        modelSalesList.add(new ModelSales(8, R.drawable.hyundai9, "hyundai8", "10", 1000000));
-        modelSalesList.add(new ModelSales(9, R.drawable.hyundai10, "hyundai9", "10", 1000000));
-        modelSalesList.add(new ModelSales(10, R.drawable.hyundai11, "hyundai10", "10", 1000000));
-        modelSalesList.add(new ModelSales(11, R.drawable.hyundai12, "hyundai", "10", 1000000));
-        modelSalesList.add(new ModelSales(12, R.drawable.hyundai13, "hyundai", "10", 1000000));
-        modelSalesList.add(new ModelSales(13, R.drawable.hyundai14, "hyundai", "10", 1000000));
-        modelSalesList.add(new ModelSales(14, R.drawable.hyundai15, "hyundai", "10", 1000000));
-        modelSalesList.add(new ModelSales(15, R.drawable.hyundai16, "hyundai", "10", 1000000));
+        modelSalesList.add(new ModelSales(1, R.drawable.hyundai1, "hyundai1", "10", 1000000));
+        modelSalesList.add(new ModelSales(1, R.drawable.hyundai1, "hyundai1", "10", 1000000));
+        modelSalesList.add(new ModelSales(1, R.drawable.hyundai1, "hyundai1", "10", 1000000));
+        modelSalesList.add(new ModelSales(1, R.drawable.hyundai1, "hyundai1", "10", 1000000));
+        modelSalesList.add(new ModelSales(1, R.drawable.hyundai1, "hyundai1", "10", 1000000));
+        modelSalesList.add(new ModelSales(1, R.drawable.hyundai1, "hyundai1", "10", 1000000));
+        modelSalesList.add(new ModelSales(1, R.drawable.hyundai1, "hyundai1", "10", 1000000));
+        modelSalesList.add(new ModelSales(2, R.drawable.hyundai6, "hyundai2", "10", 1000000));
+        modelSalesList.add(new ModelSales(2, R.drawable.hyundai6, "hyundai2", "10", 1000000));
+        modelSalesList.add(new ModelSales(2, R.drawable.hyundai6, "hyundai2", "10", 1000000));
+        modelSalesList.add(new ModelSales(2, R.drawable.hyundai6, "hyundai2", "10", 1000000));
+        modelSalesList.add(new ModelSales(2, R.drawable.hyundai6, "hyundai2", "10", 1000000));
+        modelSalesList.add(new ModelSales(2, R.drawable.hyundai6, "hyundai2", "10", 1000000));
+        modelSalesList.add(new ModelSales(2, R.drawable.hyundai6, "hyundai2", "10", 1000000));
+        modelSalesList.add(new ModelSales(2, R.drawable.hyundai6, "hyundai2", "10", 1000000));
+        modelSalesList.add(new ModelSales(2, R.drawable.hyundai6, "hyundai2", "10", 1000000));
 
         adapterSales.notifyDataSetChanged();
     }
@@ -201,8 +212,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int optionId = item.getItemId();
         switch (optionId) {
-            case R.id.page2:
-                startActivity(new Intent(this, MainActivity2.class));
+            case R.id.profile:
+                startActivity(new Intent(this, ActivityLogin.class));
                 break;
         }
         return super.onOptionsItemSelected(item);

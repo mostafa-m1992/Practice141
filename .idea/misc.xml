@@ -3,17 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/layout/activity_main.xml" value="0.15217391304347827" />
-        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/layout/activity_main2.xml" value="0.22083333333333333" />
-        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
-        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/layout/main_toolbar.xml" value="0.1" />
-        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/layout/nav_header.xml" value="0.1" />
-        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/layout/recycler_free.xml" value="0.35874439461883406" />
-        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/layout/recycler_only.xml" value="0.35874439461883406" />
-        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/layout/recycler_sales.xml" value="0.25" />
-        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/layout/recycler_visit.xml" value="0.33" />
-        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/menu/nav_menu.xml" value="0.1" />
-        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/menu/option_menu.xml" value="0.1" />
+        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/Practice141/app/src/main/res/layout/activity_register.xml" value="0.15942028985507245" />
       </map>
     </option>
   </component>
